@@ -1,5 +1,5 @@
 import React from 'react';
-import './_settings.scss';
+import './settings.scss';
 import { Button, Experience, Footer, Form, Header, Navbar, Projects } from './components';
 
 const App = () => {

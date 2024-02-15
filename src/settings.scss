@@ -16,17 +16,32 @@ $brown: #d4a373;
 $font-family-normal: "Poppins", sans-serif;
 $font-family-fancy: "Lobster", sans-serif;
 
+$transition: all .7s ease;
+
 /***************
 Settings
 ***************/
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: $font-family-normal;
     background-color: $white;
     color: $green-font;
+    min-height: 100vh;
+    position: relative;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    li{
+        list-style: none;
+    }
 }
 
 /***************
