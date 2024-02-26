@@ -1,6 +1,15 @@
 body #header{
     min-height: 100vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    .image-container img{
+        max-width: 300px;
+        border-radius: 50%;
+    }
+    .btn-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

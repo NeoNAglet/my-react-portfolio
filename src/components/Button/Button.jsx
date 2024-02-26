@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './button.scss';
 
-export default class Button extends Component {
-  render() {
-    return (
-      <a className='btn' href='/'>Button</a>
-    )
-  }
+const Button = ({text, link}) => {
+  return (
+    <div className="btn">
+      <a href={link}>
+        {text}
+      </a>
+    </div>
+  )
 }
+
+export default Button
