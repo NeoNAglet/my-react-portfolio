@@ -1,9 +1,53 @@
+@import '../../settings.scss';
+
 body #header{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    position: relative;
+    .logo-image{
+        position: absolute;
+        max-width: 75px;
+        border-radius: 50%;
+        z-index: -1;
+        &.i1{
+            top: 30%;
+            left: 5%;
+        }
+        &.i2{
+            top: 35%;
+            left: 12%;
+        }
+        &.i3{
+            top: 40%;
+            left: 19%;
+        }
+        &.i4{
+            top: 45%;
+            left: 26%;
+        }
+        &.i5{
+            top: 30%;
+            right: 5%;
+        }
+        &.i6{
+            top: 35%;
+            right: 12%;
+        }
+        &.i7{
+            top: 40%;
+            right: 19%;
+        }
+        &.i8{
+            top: 45%;
+            right: 26%;
+        }
+    }
+    h1{
+        font-family: $font-family-fancy;
+    }
     .image-container img{
         max-width: 300px;
         border-radius: 50%;
