@@ -1,100 +1,45 @@
 @import '../../settings.scss';
 
 body #navbar{
-    padding-inline: 5rem;
-    padding-block: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    height: fit-content;
-    .logo-container{
-        transition: $transition;
-        position: relative;
-        transform-origin: center;
-        a h2{
-            font-family: $font-family-fancy;
-            font-size: 4rem;
-        }
-    }
-    .nav-menu{
+    right: 0;
+    padding-inline: 40px;
+    & > div{
+        border-radius: 50px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
-        position: relative;
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: $brown;
-            border-radius: 50rem;
-            z-index: -1;
-            transform: scale(1.3);
-            transform-origin: center;
-            opacity: 0;
-            transition: $transition;
+        width: 70%;
+        margin-inline: auto;
+        @include boxShadow();
+        padding: 20px;
+        strong{
+            font-size: 25px;
         }
-        ul{
+        .nav-menu ul{
             display: flex;
             align-items: center;
-            li{
-                position: relative;
-                padding-inline: 17.5px;
-                padding-block: 5px;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $brown;
-                    z-index: -1;
-                    border-radius: 50px;
-                    transition: $transition;
-                    transform-origin: center;
-                    transform: scale(1.5);
-                    opacity: 0;
-                }
-                &:hover{
-                    color: $white;
-                    &::before{
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-                }
+            gap: 20px;
+            li a{
+                @include linkHover();
             }
         }
     }
-    &.scrolled{
-        width: fit-content;
-        left: 31%;
-        padding-inline: 0;
-        padding-block: 0;
-        .logo-container{
-            display: none;
-        }
-        .nav-menu{
-            top: 2.5rem;
-            &::before{
-                transform: scale(1);
-                opacity: .7;
+
+    @include mobile{
+        padding-inline: 20px;
+        & > div{
+            width: 100%;
+            justify-content: center;
+            .nav-menu ul{
+                gap: 18px;
+                justify-content: space-between;
             }
-            ul li{
-                &::before{
-                    background-color: $brown-font;
-                }
-                &:hover{
-                    color: $brown-light;
-                }}
+            .logo-container{
+                display: none;
+            }
         }
     }
 }

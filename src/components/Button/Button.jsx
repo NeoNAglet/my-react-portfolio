@@ -1,13 +1,14 @@
 import React from 'react';
 import './button.scss';
 
-const Button = ({text, link}) => {
+const Button = ({text, link, target}) => {
   return (
-    <div className="btn">
-      <a href={link}>
+    link && 
+    <a href={link} className="btn" target={target ? target : '_self'}>
+      <span >
         {text}
-      </a>
-    </div>
+      </span>
+    </a>
   )
 }
 

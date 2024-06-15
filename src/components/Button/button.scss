@@ -1,40 +1,19 @@
 @import '../../settings.scss';
 
 .btn{
-    margin-right: 1.5rem;
-    margin-top: 1.5rem;
-    // border: 3px solid $brown-font;
-    box-shadow: 1px 2px 2px 1px $brown-font;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $brown-font;
-    padding: 1rem;
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
-    transition: $transition;
-    // span{
-    //     z-index: 1;
-    //     position: relative;
-    //     display: inline-block;
-    // }
-    &::after{
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: -110%;
-        width: calc(100% + 6px);
-        height: calc(100% + 6px);
-        background-color: $brown-font;
-        // box-shadow: 0px 0px 0px 3px $brown;
-        border-radius: 50px;
-        z-index: -1;
+    border-radius: 30px;
+    text-shadow: 0 1px $white;
+    @include boxShadow();
+    @include boxShadowHover();
+    span{
         transition: $transition;
     }
-    &:hover{
-        &::after{
-            left: -3px;
-        }
-        color: $white;
-        cursor: pointer;
+    &:hover span{
+        transform: scale(.97);
     }
-
 }

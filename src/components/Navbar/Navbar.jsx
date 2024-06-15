@@ -18,23 +18,25 @@ const Navbar = () => {
     
     return (
       <div id='navbar' className={`${navColour && 'scrolled'}`}>
-        <div className="logo-container">
-          <a href="/#header">
-            <h2>N.</h2>
-          </a>
-        </div>
-        <div className="nav-menu">
-          <ul>
-            <li>
-              <a href="/#experience">Experience</a>
-            </li>
-            <li>
-              <a href="/#projects">Projects</a>
-            </li>
-            <li>
-              <a href="/#form">Contact Me</a>
-            </li>
-          </ul>
+        <div>
+          <div className="logo-container">
+            <a href="/#header">
+              <strong>N.</strong>
+            </a>
+          </div>
+          <div className="nav-menu">
+            <ul>
+              <li>
+                <a href="/#experience">Experience</a>
+              </li>
+              <li>
+                <a href="/#projects">Projects</a>
+              </li>
+              <li>
+                <a href="/#form">Contact Me</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     )

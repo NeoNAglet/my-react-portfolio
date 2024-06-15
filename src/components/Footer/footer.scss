@@ -1,4 +1,10 @@
 #footer{
-    padding-inline: 5rem;
-    padding-block: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    p{
+        font-size: 12px;
+        text-align: center;
+    }
 }
