@@ -1,3 +1,18 @@
-.projects{
-    background-color: bisque;
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .projects-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        width: 90%;
+        margin-top: 40px;
+        .project{
+            width: 30%;
+        }
+    }
 }

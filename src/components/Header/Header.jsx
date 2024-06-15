@@ -14,6 +14,11 @@ export default class Header extends Component {
           <Button text={'View CV'} target={'_blank'} link={cv}/>
           <Button text={'Contact me'} link={'#contact-form'}/>
         </div>
+        <div className="scroll-down">
+          <a href="#experience">
+            &#8964;
+          </a>
+        </div>
       </div>
     )
   }

@@ -1,11 +1,10 @@
 body #header{
-    min-height: calc(100vh - 74.5px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 50px;
-    margin-top: 74.5px;
     .header-title{
         width: 50%;
         p span{
@@ -17,5 +16,25 @@ body #header{
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+    }
+    .scroll-down a{
+        position: relative;
+        font-weight: 600;
+        font-size: 40px;
+        display: block;
+        // transform: rotate(90deg);
+        animation: scrollDown .7s ease-in-out alternate-reverse infinite;
+        margin-top: 30px;
+        a{
+            padding: 20px;
+        }
+    }
+    @keyframes scrollDown {
+        from{
+            top: -20px;
+        }
+        to{
+            top: 20px;
+        }
     }
 }

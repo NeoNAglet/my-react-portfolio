@@ -1,3 +1,81 @@
-.experience{
-    background-color: brown;
+@import '../../settings.scss';
+
+#experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .tabs{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 30px;
+        @include boxShadow();
+        .tab{
+            @include linkHover();
+            &.active{
+                background-size: 100% 2.5px;
+                background-position: bottom left;
+            }
+        }
+    }
+    .accordion{
+        margin-top: 30px;
+        width: 80%;
+        .item{
+            overflow: hidden;
+            .title, .content{
+            }
+            .title{
+                cursor: pointer;
+                padding: 20px 40px;
+                @include boxShadow();
+            }
+            .content{
+                background: none;
+                display: none;
+                padding: 40px;
+                box-shadow: $box-shadow;
+                border: $border;
+                p{
+                    margin-bottom: 20px;
+                }
+    
+            }
+            &.active .content{
+                display: block;
+            }
+        }
+    }
+}
+
+.skills-banner{
+    padding-block: 20px;
+    display: flex;
+    // gap: 80px;
+    width: fit-content;
+    & >div{
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        animation: bannerScroll 10s linear infinite;
+        padding-left: 80px;
+        .skill{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@keyframes bannerScroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }

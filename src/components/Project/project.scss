@@ -1,3 +1,48 @@
+@import '../../settings.scss';
+
 .project{
-    background-color: aqua;
+    @include boxShadow();
+    @include boxShadowHover();
+    background: none;
+    padding: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $background-image;
+        border-radius: 30px;
+        padding: 20px;
+        text-align: center;
+        transition: $transition;
+    }
+    .tags{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-size: 10px;
+        color: $brown;
+    }
+    &:hover .top{
+       opacity: 0;
+       z-index: -1;
+    }
 }

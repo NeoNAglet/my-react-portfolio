@@ -18,6 +18,11 @@ $font-family-normal: "Spline Sans Mono", monospace;
 
 $transition: .5s ease;
 
+$box-shadow: 0 4px 3px 1px $white, 0 6px 8px #c6bbb5, 0 -4px 4px #cec1b9, 0 -6px 4px $white, inset 0 0 3px 0 #CECFD1;
+$box-shadow-hover: 0 4px 3px 1px $white, 0 6px 8px #c6bbb5, 0 -4px 4px #cec1b9, 0 -6px 4px $white, inset 0 0 3px 3px #CECFD1;
+$border: 1px solid #a8a7a6;
+$background-image: linear-gradient(to top, #cec1b9 0%, #fff 80%, $white 100%);
+
 /***************
 Responsive
 ***************/
@@ -32,14 +37,14 @@ Mixins
 ***************/
 
 @mixin boxShadow(){
-    box-shadow: 0 4px 3px 1px $white, 0 6px 8px #c6bbb5, 0 -4px 4px #cec1b9, 0 -6px 4px $white, inset 0 0 3px 0 #CECFD1;
-    background-image: linear-gradient(to top, #cec1b9 0%, #fff 80%, $white 100%);
-    border: 1px solid #a8a7a6;
+    box-shadow: $box-shadow;
+    background-image: $background-image;
+    border: $border;
     transition: $transition;
 }
 @mixin boxShadowHover(){
     &:hover{
-        box-shadow: 0 4px 3px 1px $white, 0 6px 8px #c6bbb5, 0 -4px 4px #cec1b9, 0 -6px 4px $white, inset 0 0 3px 3px #CECFD1;
+        box-shadow: $box-shadow-hover;
     }
 }
 
@@ -50,8 +55,25 @@ Mixins
     background-position: bottom right;
     background-size: 0% 2.5px;
     transition: background-size $transition;
+    width: fit-content;
+    cursor: pointer;
     &:hover{
         background-size: 100% 2.5px;
+        background-position: bottom left;
+    }
+}
+
+@mixin linkHoverUnderline(){
+    transition: $transition;
+    background-image: linear-gradient($brown-font, $brown-font);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100% 2.5px;
+    transition: background-size $transition;
+    width: fit-content;
+    cursor: pointer;
+    &:hover{
+        background-size: 0% 2.5px;
         background-position: bottom left;
     }
 }
@@ -65,19 +87,33 @@ Settings
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: $font-family-normal;
     background-color: $white;
     color: $green-font;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 
     a{
         text-decoration: none;
         color: inherit;
+        padding-bottom: 2px;
+        &.link_underline{
+            @include linkHoverUnderline();
+        }
     }
     li{
         list-style: none;
+    }
+
+    button{
+        background-color: transparent;
+        border: 0;
     }
 }
 
@@ -87,11 +123,9 @@ Fonts
 
 body{
     h1, h3, h5{
-        color: $brown;
         font-weight: 500;
     }
     h2, h4, h6{
-        color: $brown;
         font-weight: 500;
     }
     h1{
@@ -111,13 +145,13 @@ body{
         line-height: 1.3;
         letter-spacing: .7px;
     }
-    a{
+    a, button{
         font-size: 15px;
         line-height: 1.3;
         letter-spacing: .7px;
     }
     @include mobile(){
-        a{font-size: 13px;}
+        a, button{font-size: 13px;}
     }
 }
 /***************
