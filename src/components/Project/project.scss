@@ -24,25 +24,54 @@
         bottom: 0;
         right: 0;
         z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $background-image;
-        border-radius: 30px;
-        padding: 20px;
         text-align: center;
         transition: $transition;
+        .tags{
+            color: $brown-font;
+        }
+        .title-container{
+            height: 100%;
+            width: 100%;
+            background-color: rgba($white, .5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 30px;
+            padding: 20px;
+        }
+        img.background-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     }
-    .tags{
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        font-size: 10px;
-        color: $brown;
+    .bottom{
+        opacity: 0;
     }
-    &:hover .top{
-       opacity: 0;
-       z-index: -1;
+    &:hover{
+        .top{
+            opacity: 0;
+            z-index: -1;
+         }
+        .bottom{
+            opacity: 1;
+        }
+    }
+}
+
+
+.tags{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: $brown;
+    .tag{
+        font-weight: 600;
     }
 }

@@ -6,8 +6,14 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    form.form-wrapper{
-        width: 60%;
+    .title-container{
+        margin-bottom: 40px;
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+    .title-container, form.form-wrapper, .thank-you{
+        width: 75%;
     }
     .socials{
         display: flex;

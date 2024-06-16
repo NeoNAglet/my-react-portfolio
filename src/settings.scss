@@ -115,6 +115,12 @@ body{
         background-color: transparent;
         border: 0;
     }
+    img{
+        border-radius: 20px;
+        box-shadow: $box-shadow;
+        max-width: 100%;
+        object-fit: cover;
+    }
 }
 
 /***************

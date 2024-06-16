@@ -7,8 +7,8 @@ const App = () => {
     <>
       <Navbar />
       <Header />
-      <Experience />
       <Projects />
+      <Experience />
       <Contact />
       <Footer />
     </>

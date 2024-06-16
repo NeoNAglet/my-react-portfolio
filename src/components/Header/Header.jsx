@@ -16,7 +16,7 @@ export default class Header extends Component {
           <Button text={'Contact me'} link={'#contact'}/>
         </div>
         <div className="scroll-down">
-          <Button icon={<RiArrowDownFill/>} link={'#experience'} />
+          <Button icon={<RiArrowDownFill/>} link={'#projects'} />
         </div>
       </div>
     )

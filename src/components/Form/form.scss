@@ -1,6 +1,9 @@
 @import '../../settings.scss';
 .thank-you{
     margin-block: 40px;
+    p span{
+        font-size: 45px;
+    }
     .btn{
         margin-top: 20px;
     }

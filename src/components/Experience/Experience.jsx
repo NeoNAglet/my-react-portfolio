@@ -59,6 +59,27 @@ export default function Experience () {
       certificate: udacityCertificate
     },
     {
+      school: 'freeCodeCamp',
+      qualification: 'Front End Development Libraries',
+      period: 'March 2022',
+      progress: 'Completed',
+      certificate: 'https://www.freecodecamp.org/certification/Neno-N/front-end-development-libraries'
+    },
+    {
+      school: 'freeCodeCamp',
+      qualification: 'JavaScript Algorithms and Data Structures',
+      period: 'January 2022',
+      progress: 'Completed',
+      certificate: 'https://freecodecamp.org/certification/Neno-N/javascript-algorithms-and-data-structures'
+    },
+    {
+      school: 'freeCodeCamp',
+      qualification: 'Responsive Web Design',
+      period: 'January 2022',
+      progress: 'Completed',
+      certificate: 'https://freecodecamp.org/certification/neno-n/responsive-web-design'
+    },
+    {
       school: 'St. Thomas Aquinas High School',
       qualification: 'IEB Matric',
       period: '2013 - 2017',

@@ -56,8 +56,7 @@ const Form = () => {
       {
         formSubmitted ?
         <div className="thank-you">
-          <h2>Thank you for your submission</h2>
-          <p>I will be in contact soon. In the meantime you can check out my socials linked below.</p>
+          <p><span>Thank you</span> for your submission, I will be in contact soon. In the meantime you can check out my socials linked above.</p>
           <button className='btn' onClick={()=> resetForm()}>Send another message</button>
         </div> :
         <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="form-wrapper">
