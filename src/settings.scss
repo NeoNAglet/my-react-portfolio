@@ -161,7 +161,7 @@ Spacing
 body{
     .container{
         padding-inline: 40px;
-        padding-block: 7rem;
+        padding-block: 8rem;
         @include mobile(){
             padding-inline: 20px;
         }

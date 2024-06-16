@@ -8,6 +8,7 @@
     color: $brown-font;
     border-radius: 30px;
     text-shadow: 0 1px $white;
+    cursor: pointer;
     @include boxShadow();
     @include boxShadowHover();
     span{

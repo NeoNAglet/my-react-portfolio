@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import './experience.scss';
 import neaReference from '../../assets/images/Neo Ngwenya.png';
 import udacityCertificate from '../../assets/pdf/Udacity Certificate.pdf';
@@ -17,7 +17,7 @@ export default function Experience () {
   
   function tabClick(experience){
     setIsExperience(experience);
-    if(activeIndex != 0){
+    if(activeIndex !== 0){
       setActiveIndex(0);
     }
   }
@@ -78,13 +78,13 @@ export default function Experience () {
             {
               experience.map((exp, index)=>{
                 return(
-                  <div className={`item ${activeIndex == index ? 'active' : ''}`}>
+                  <div key={index} className={`item ${activeIndex === index ? 'active' : ''}`}>
                     <div onClick={()=>accordionClick(index)} className="title">{exp.position}</div>
                     <div className="content">
                       <p><strong>Company:</strong> {exp.link ? <a href={exp.link} rel="noreferrer" target='_blank' className='link_underline'>{exp.title}</a> : exp.title}</p>
                       <p><strong>Period:</strong> {exp.period}</p>
                       {exp.reference && <p><strong>Reference:</strong> <a href={exp.reference} rel="noreferrer" className='link_underline' target='_blank'>A reference from {exp.title}</a></p>}
-                      <p><strong>Description:</strong> <p>{exp.content}</p></p>
+                      <p><strong>Description:</strong> <span>{exp.content}</span></p>
                     </div>
                   </div>
                 )
@@ -96,7 +96,7 @@ export default function Experience () {
             {
               education.map((school, index)=>{
                 return(
-                  <div className={`item ${activeIndex == index ? 'active' : ''}`}>
+                  <div key={index} className={`item ${activeIndex === index ? 'active' : ''}`}>
                     <div onClick={()=>accordionClick(index)} className="title">{school.qualification}</div>
                     <div className="content">
                       <p><strong>School:</strong> {school.school}</p>
@@ -116,7 +116,7 @@ export default function Experience () {
           {
             images.map((skill, index)=>{
               return (
-                <img className='skill' src={skill} alt="" />
+                <img key={index} className='skill' src={skill} alt="" />
               )
             })
           }
@@ -125,7 +125,7 @@ export default function Experience () {
           {
             images.map((skill, index)=>{
               return (
-                <img className='skill' src={skill} alt="" />
+                <img key={index} className='skill' src={skill} alt="" />
               )
             })
           }

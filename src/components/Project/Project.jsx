@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './project.scss';
 
 export default function Project ({title, link, description, languages}) {
@@ -8,7 +8,7 @@ export default function Project ({title, link, description, languages}) {
         <div className="tags">
           {
             languages.map((language, index)=>{
-              return <span className="tag">{language}</span>
+              return <span className="tag" key={index}>{language}</span>
             })
           }
         </div>
@@ -18,13 +18,13 @@ export default function Project ({title, link, description, languages}) {
         <div className="tags">
           {
             languages.map((language, index)=>{
-              return <span className="tag">{language}</span>
+              return <span className="tag" key={index}>{language}</span>
             })
           }
         </div>
         <h3>{title}</h3>
         <p>{description.length <= 100 ? description : `${description.substr(0,100)}...`}</p>
-        {link && <a href={link} target='_blank' className='link_underline'>Visit Site</a>}
+        {link && <a href={link} target='_blank' rel="noreferrer" className='link_underline'>Visit Site</a>}
       </div>
     </div>
   )

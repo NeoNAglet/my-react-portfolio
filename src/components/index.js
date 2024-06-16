@@ -6,3 +6,4 @@ export { default as Projects } from './Projects/Projects';
 export { default as Header } from './Header/Header';
 export { default as Form } from './Form/Form';
 export { default as Experience } from './Experience/Experience';
+export { default as Contact } from './Contact/Contact';

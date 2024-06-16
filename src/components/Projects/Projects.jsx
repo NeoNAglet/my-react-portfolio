@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './projects.scss'
 import Project from '../Project/Project';
 
@@ -38,7 +38,7 @@ export default function Projects () {
         {
           projects.map((project, index)=>{
             return(
-              <Project title={project.title} link={project.link ? project.link : ''} description={project.excerpt} languages={project.languages} />
+              <Project key={index} title={project.title} link={project.link ? project.link : ''} description={project.excerpt} languages={project.languages} />
             )
           })
         }

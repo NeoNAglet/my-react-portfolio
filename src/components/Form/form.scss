@@ -1,3 +1,33 @@
-#form{
-    background-color: blueviolet;
+@import '../../settings.scss';
+.thank-you{
+    margin-block: 40px;
+    .btn{
+        margin-top: 20px;
+    }
+}
+form.form-wrapper{
+    .form-group{
+        margin-bottom: 20px;
+        label{
+            display: block;margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        p{
+            font-size: 12px;
+            color: red;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        input, textarea{
+            box-shadow: $box-shadow;
+            border: $border;
+            padding: 20px;
+            border-radius: 30px;
+            width: 100%;
+            font-size: 20px;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
 }

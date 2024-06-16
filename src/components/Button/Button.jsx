@@ -1,14 +1,21 @@
 import React from 'react';
 import './button.scss';
 
-const Button = ({text, link, target}) => {
+const Button = ({text, link, target, icon, handleFunction, type}) => {
   return (
-    link && 
-    <a href={link} className="btn" target={target ? target : '_self'}>
+    link ? 
+    <a href={link} className="btn" target={target ? target : '_self'} rel="noreferrer">
       <span >
-        {text}
+        {text && text}
+        {icon && icon}
       </span>
-    </a>
+    </a> : 
+    <button type={type ? type : 'button'} onClick={()=>handleFunction} className="btn" >
+      <span >
+        {text && text}
+        {icon && icon}
+      </span>
+    </button>
   )
 }
 

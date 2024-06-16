@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './navbar.scss';
 
-const Navbar = () => {
-  const [navColour, setNavColour] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(()=>{
-    window.addEventListener('scroll', () => {
-      setScrollY(window.scrollY);
-      if(scrollY >= 50){
-        setNavColour(true);
-      } else if(scrollY < 50){
-        setNavColour(false)
-      };
-    })
-  }, [window.scrollY]);
-    
+const Navbar = () => {    
     return (
-      <div id='navbar' className={`${navColour && 'scrolled'}`}>
+      <div id='navbar'>
         <div>
           <div className="logo-container">
             <a href="/#header">
@@ -33,7 +19,7 @@ const Navbar = () => {
                 <a href="/#projects">Projects</a>
               </li>
               <li>
-                <a href="/#form">Contact Me</a>
+                <a href="/#contact">Contact</a>
               </li>
             </ul>
           </div>
