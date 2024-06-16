@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/my-react-portfolio/static/css/main.c0b264f7.css",
+    "main.js": "/my-react-portfolio/static/js/main.8a34e113.js",
+    "static/js/453.5ec38994.chunk.js": "/my-react-portfolio/static/js/453.5ec38994.chunk.js",
+    "static/media/Random Recipe Generator.png": "/my-react-portfolio/static/media/Random Recipe Generator.1d14ffe2050988ed7b10.png",
+    "static/media/Service Landing Page.png": "/my-react-portfolio/static/media/Service Landing Page.9a7b2dea6b924e10ebc6.png",
+    "static/media/Kitten Calculator.png": "/my-react-portfolio/static/media/Kitten Calculator.9af3c1096b149dd758fd.png",
+    "static/media/Random Colour Generator.png": "/my-react-portfolio/static/media/Random Colour Generator.64f602c08840fbe7db1c.png",
+    "static/media/Markdown Primer.png": "/my-react-portfolio/static/media/Markdown Primer.34dd8d79c824c520527f.png",
+    "static/media/Pomodoro Timer.png": "/my-react-portfolio/static/media/Pomodoro Timer.be30be0d57c4731e4883.png",
+    "static/media/Neo Ngwenya.png": "/my-react-portfolio/static/media/Neo Ngwenya.8ef9ce5b91b1b90058ee.png",
+    "static/media/Drum Machine.png": "/my-react-portfolio/static/media/Drum Machine.b298f10089f32c2c7b8c.png",
+    "static/media/Professional CV Resume.pdf": "/my-react-portfolio/static/media/Professional CV Resume.b8b491c3e8cc949d2bec.pdf",
+    "static/media/Udacity Certificate.pdf": "/my-react-portfolio/static/media/Udacity Certificate.8ab5dfed5bd4bcb76b3b.pdf",
+    "static/media/React Logo.png": "/my-react-portfolio/static/media/React Logo.c9978df455537bbaedc7.png",
+    "static/media/wordpress Logo.png": "/my-react-portfolio/static/media/wordpress Logo.4fc54c04442929df4f3a.png",
+    "static/media/Sass Logo.png": "/my-react-portfolio/static/media/Sass Logo.a839188ddea89f608cf0.png",
+    "static/media/Python Logo.png": "/my-react-portfolio/static/media/Python Logo.9a5f07ba74af59c7bce8.png",
+    "static/media/Angular Logo.png": "/my-react-portfolio/static/media/Angular Logo.8057e65830c1ae402a20.png",
+    "static/media/Next Logo.png": "/my-react-portfolio/static/media/Next Logo.3bf27866e21e1fda7590.png",
+    "static/media/HTML Logo.png": "/my-react-portfolio/static/media/HTML Logo.8f318f83abd507d01cbc.png",
+    "index.html": "/my-react-portfolio/index.html",
+    "main.c0b264f7.css.map": "/my-react-portfolio/static/css/main.c0b264f7.css.map",
+    "main.8a34e113.js.map": "/my-react-portfolio/static/js/main.8a34e113.js.map",
+    "453.5ec38994.chunk.js.map": "/my-react-portfolio/static/js/453.5ec38994.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0b264f7.css",
+    "static/js/main.8a34e113.js"
+  ]
+}
